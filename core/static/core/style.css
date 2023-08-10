@@ -1,0 +1,29 @@
+.slide {
+    position: fixed;
+    transition: all 0.5s;
+}
+
+.btn {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    font-size: 26px;
+}
+
+.btn:active {
+    transform: scale(1.1);
+}
+
+.btn-prev {
+    top: 45%;
+    left: 2%;
+}
+
+.btn-next {
+    top: 45%;
+    right: 2%;
+}

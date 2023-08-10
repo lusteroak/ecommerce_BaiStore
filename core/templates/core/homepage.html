@@ -1,7 +1,6 @@
 {% extends "base.html" %}
-
+{% block title %}Home Page{% endblock %}
 {% block content %}
-<div class="container">
-    <p>This is the home page</p>
-</div>
+{% include "core/hero_carousel.html" %}
+{% include "core/new_products.html" %}
 {% endblock %}

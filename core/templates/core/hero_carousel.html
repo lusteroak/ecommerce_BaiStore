@@ -1,0 +1,14 @@
+{% block content %}
+<div class="slider mt-2">
+
+    <div class="flex">
+        {% for image in product_hero_images %}
+        <div class="slide overflow-x-auto">
+            <img class="h-64 w-full object-cover object-center" src="{{ image.image.url }}" alt="mountains" />
+        </div>
+        {% endfor %}
+    </div>
+    <button class="btn btn-next text-white bg-teal-950">&rarr;</button>
+    <button class="btn btn-prev text-white bg-teal-950">&larr;</button>
+</div>
+{% endblock %}
