@@ -21,7 +21,7 @@
           {% comment %}
           {% for categories in product_categories %}
           <ul>
-            <li>{{ categories.category }}</li>
+            <li>{{ categories.name }}</li>
           </ul>
           {% endfor %}
           {% endcomment %}
@@ -108,7 +108,7 @@
       <div class="m-2">
         <ul>
           <li class="flex justify-between">
-            <p>{{ categories.category }}</p> <span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg"
+            <p>{{ categories.name }}</p> <span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg"
                 fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
               </svg>
@@ -129,7 +129,6 @@
   {% block content %}
   {% endblock %}
   <footer>
-    <p>Footer</p>
   </footer>
 
   <script type="text/javascript" src="{% static 'core/index.js' %}"></script>

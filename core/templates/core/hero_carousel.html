@@ -1,10 +1,9 @@
 {% block content %}
-<div class="slider mt-2">
-
-    <div class="flex">
+<div class="slider mt-2 ">
+    <div class="flex flex-nowrap overflow-x-hidden whitespace-nowrap">
         {% for image in product_hero_images %}
-        <div class="slide overflow-x-auto">
-            <img class="h-64 w-full object-cover object-center" src="{{ image.image.url }}" alt="mountains" />
+        <div class="grow slide">
+            <img class="object-contain object-cover" src="{{ image.get_thumbnail }}" alt="mountains" />
         </div>
         {% endfor %}
     </div>

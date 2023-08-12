@@ -3,9 +3,7 @@
 const slides = document.querySelectorAll(".slide");
 
 // loop through slides and set each slides translateX
-slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${indx * 100}%)`;
-});
+
 
 // select next slide button
 const nextSlide = document.querySelector(".btn-next");

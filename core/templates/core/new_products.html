@@ -1,7 +1,37 @@
 {% block content %}
-<div>
-    <p>
-        Some new Products
-    </p>
+<div class="new_products">
+    <div class="flex justify-between p-2">
+        <div class="new_products_title">
+            <h1 class="text-2xl font-bold">New Products</h1>
+        </div>
+        <div class="flex new_products_link items-center">
+            <h3 class="text-sm text-sky-500"><a class="underline decoration-sky-500/30" href="#">See All New
+                    Products</a></h3>
+        </div>
+    </div>
+    <div class="flex new_products_list mt-2 p-2">
+        {% for product in products %}
+        <div class="product_list ">
+            {% if product.in_stock %}
+            <div class="flex gap-x-2">
+                <span class="text-white check">
+                    <svg class="w-6 h-6" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="5.75" cy="5" r="5" fill="#78A962" />
+                        <path d="M7.75 4L5.23404 7L3.75 5.27853" stroke="white" stroke-linecap="round" />
+                    </svg>
+                </span>
+                <p class="text-green-600">in stock</p>
+            </div>
+            <img class="w-36 h-36" src="{{ product.get_thumbnail }}">
+            <p class="text-sm p-2">{{ product.name }}</p>
+            <p class="text-slate-500 text-sm p-2 line-through">${{ product.get_display_price }}</p>
+            <p class="text-sm p-2 font-bold">${{ product.get_display_price }}</p>
+            {% else %}
+            {% endif %}
+
+        </div>
+
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
